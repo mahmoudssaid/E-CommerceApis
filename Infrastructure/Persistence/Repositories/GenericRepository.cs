@@ -1,4 +1,6 @@
-﻿namespace Persistence.Repositories
+﻿using Domain.Entities.Basket;
+
+namespace Persistence.Repositories
 {
     internal class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TKey>
         where TEntity : BaseEntity<TKey>

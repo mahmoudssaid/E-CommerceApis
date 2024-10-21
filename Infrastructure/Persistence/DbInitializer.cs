@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Domain.Entities.Identity;
+using Domain.Entities.Productc;
+using Microsoft.AspNetCore.Identity;
 using Persistence.Identity;
 using System.Text.Json;
 

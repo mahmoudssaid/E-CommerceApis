@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace Domain.Entities.Basket
 {
     public abstract class BaseEntity<TKey>
     {

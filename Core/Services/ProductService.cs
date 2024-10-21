@@ -2,6 +2,7 @@
 global using Domain.Contracts;
 global using Services.Abstractions;
 global using Shared;
+using Domain.Entities.Productc;
 using Domain.Exceptions;
 using Services.Specifications;
 

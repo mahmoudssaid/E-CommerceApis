@@ -1,4 +1,6 @@
-﻿namespace Services.Specifications
+﻿using Domain.Entities.Productc;
+
+namespace Services.Specifications
 {
     internal class ProductWithBrandAndTypeSpecifications : Specifications<Product>
     {

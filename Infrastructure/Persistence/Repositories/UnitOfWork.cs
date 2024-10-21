@@ -1,5 +1,6 @@
 ﻿global using Persistence.Data;
 using System.Collections.Concurrent;
+using Domain.Entities.Basket;
 namespace Persistence.Repositories
 {
     public class UnitOfWork : IUnitOfWork

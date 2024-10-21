@@ -1,4 +1,6 @@
-﻿namespace Services.MappingProfiles
+﻿using Domain.Entities.Basket;
+
+namespace Services.MappingProfiles
 {
     internal class BasketProfile : Profile
     {

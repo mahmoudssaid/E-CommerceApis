@@ -1,4 +1,5 @@
 ﻿global using Domain.Entities;
+using Domain.Entities.Productc;
 
 namespace Services.MappingProfiles
 {

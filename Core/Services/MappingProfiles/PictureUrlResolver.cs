@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Domain.Entities.Productc;
+using Microsoft.Extensions.Configuration;
 
 namespace Services.MappingProfiles
 {

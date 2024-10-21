@@ -1,4 +1,5 @@
-﻿using StackExchange.Redis;
+﻿using Domain.Entities.Basket;
+using StackExchange.Redis;
 using System.Text.Json;
 namespace Persistence.Repositories
 {

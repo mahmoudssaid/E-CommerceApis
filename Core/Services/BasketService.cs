@@ -1,4 +1,5 @@
 ﻿
+using Domain.Entities.Basket;
 using Domain.Exceptions;
 
 namespace Services
