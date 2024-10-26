@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Identity;
+using Domain.Entities.Order;
 using Domain.Entities.Productc;
 using Microsoft.AspNetCore.Identity;
 using Persistence.Identity;
@@ -83,6 +84,24 @@ namespace Persistence
                     if (products is not null && products.Any())
                     {
                         await _storeContext.Products.AddRangeAsync(products);
+                        await _storeContext.SaveChangesAsync();
+                    }
+                }
+                
+                if (!_storeContext.deliveryMethods.Any())
+                {
+                    // Read Types From File  as string 
+                    var productsData = await File.ReadAllTextAsync(@"..\Infrastructure\Persistence\Data\Seeding\delivery.json");
+
+
+                    // Transform into C# Objects
+                    var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(productsData);
+
+
+                    //Add to DB & save Changes 
+                    if (methods is not null && methods.Any())
+                    {
+                        await _storeContext.deliveryMethods.AddRangeAsync(methods);
                         await _storeContext.SaveChangesAsync();
                     }
                 }

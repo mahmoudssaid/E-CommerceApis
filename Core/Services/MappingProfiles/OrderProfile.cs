@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using userAddress = Domain.Entities.Identity.Address;
 
 namespace Services.MappingProfiles
 {
@@ -15,7 +16,7 @@ namespace Services.MappingProfiles
     {
         public OrderProfile()
         {
-            CreateMap<Domain.Entities.Order.Address, AddressDTO>();
+            CreateMap<Domain.Entities.Order.Address, AddressDTO>().ReverseMap();
             CreateMap<OrderItem, OrderItemDTO>()
                 .ForMember(d => d.ProductId, options => options.MapFrom(s => s.product.ProductId))
                 .ForMember(d => d.ProductName, options => options.MapFrom(s => s.product.ProductName))
@@ -30,6 +31,8 @@ namespace Services.MappingProfiles
 
 
             CreateMap<DeliveryMethod, DeliveryMethodResult>();
+
+            CreateMap<AddressDTO, userAddress>().ReverseMap();
         }
     }
 }
